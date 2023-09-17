@@ -1,19 +1,48 @@
-import { createRouter, createWebHistory} from 'vue-router'
-import Home from '../views/Home.vue'
-import DrinkList from '../views/DrinkList.vue'
+import { createRouter, createWebHistory} from 'vue-router';
+import DefaultLayout from '../components/DefaultLayout.vue';
+import Home from '../views/Home.vue';
+import DrinksByIngredient from '../views/DrinksByIngredient.vue';
+import DrinksByLetter from '../views/DrinksByLetter.vue';
+import DrinksByName from '../views/DrinksByName.vue';
+import DrinkDetails from '../views/DrinkDetails.vue';
 
 
 const routes = [
     {
-        path: '/',
-        name: 'home',
-        component: Home,
-    },
+        path: "/",
+        component: DefaultLayout,
+        children: [
+            {
+                path: "/",
+                name: "home",
+                component: Home,
+            },
+        
+            {
+                path: "/by-name/:name?",
+                name: "byName",
+                component: DrinksByName,
+            },
 
-    {
-        path: "/letra/:letra",
-        name: 'byLetra',
-        component: DrinkList,
+            {
+                path: "/by-letter/:letter?",
+                name: "byLetter",
+                component: DrinksByLetter,
+            },
+        
+            {
+                path: "/by-ingredient/:ingredient?",
+                name: "byIngredient",
+                component: DrinksByIngredient,
+            },
+
+            {
+                path: "/drink/:id",
+                name: "drinkDetails",
+                component: DrinkDetails
+
+            }
+        ]
     },
 ];
 

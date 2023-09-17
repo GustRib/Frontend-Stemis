@@ -1,6 +1,6 @@
 <template>
     <div>
-        Drink List
+        By Letter
     </div>
 </template>
 
