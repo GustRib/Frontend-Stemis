@@ -8,10 +8,10 @@
             Pesquisar Drinks
         </router-link>
         <router-link :to="{name: 'byLetter'}" class="inline-flex items-center px-2 h-full transitions-colors hover:bg-purple-100">
-            Drinks por Letra
+            Pesquisar por Letras
         </router-link>
         <router-link :to="{name: 'byIngredient'}" class="inline-flex items-center px-2 h-full transitions-colors hover:bg-purple-100">
-            Drinks por Ingredientes
+            Pesquisar por Ingredientes
         </router-link>
         </div>
     </header>

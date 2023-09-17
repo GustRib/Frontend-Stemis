@@ -1,3 +1,5 @@
 export default {
-    searchedDrinks: []
+    searchedDrinks: [],
+    drinksByLetter: [],
+    drinksByIngredient: [],
 }

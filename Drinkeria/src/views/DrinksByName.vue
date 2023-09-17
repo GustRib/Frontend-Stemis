@@ -10,7 +10,7 @@
     </div>
 
     <div  class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-        <drinkItem v-for="drink of drinks" :key="drink.id" :drink="drink"/>
+        <DrinkItem v-for="drink of drinks" :key="drink.idDrink" :drink="drink" />
     </div>
 </template>
 
@@ -19,6 +19,7 @@ import { compile, onMounted, ref } from 'vue';
 import { computed } from "@vue/reactivity";
 import { useRoute } from "vue-router"
 import store from '../store';
+import DrinkItem from '../components/DrinkItem.vue';
 
 const route = useRoute();
 const keyword = ref('');

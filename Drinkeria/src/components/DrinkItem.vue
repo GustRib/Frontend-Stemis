@@ -6,7 +6,8 @@
                 <img
                     :src="drink.strDrinkThumb"
                     alt="drink.strDrink"
-                    class="rounded-t-x1 w-full h-48 object-cover">
+                    class="rounded-t-x1 w-full h-48 object-cover"
+                    />
             </router-link>
             <div class="p-3">
                 <h3 class="font-semibold"> {{ drink.strDrink }}</h3>
@@ -22,7 +23,7 @@
 
 const { drink } = defineProps ({
     drink: {
-        require: true,
+        required: true,
         type: Object
     }
 })
