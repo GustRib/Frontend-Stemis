@@ -1,9 +1,13 @@
 export function setSearchedDrinks(state, drinks) {
-    state.searchedDrinks = drinks
+    state.searchedDrinks = drinks || []
 }
 export function setDrinksByLetter(state, drinks) {
-    state.drinksByLetter = drinks
+    state.drinksByLetter = drinks || []
 }
 export function setDrinksByIngredient(state, drinks) {
-    state.drinksByIngredient = drinks
+    state.drinksByIngredient = drinks || []
+}
+
+export function setIngredient(state, ingredient) {
+    state.ingredient = ingredient
 }

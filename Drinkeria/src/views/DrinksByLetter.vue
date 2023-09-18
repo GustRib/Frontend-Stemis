@@ -9,9 +9,8 @@
         </router-link>
     </div>
 
-    <div  class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
-        <DrinkItem v-for="drink of drinks" :key="drink.idDrink" :drink="drink" />
-    </div>
+<Drinks :drinks="drinks" />
+
 </template>
 
 <script setup>
@@ -19,7 +18,7 @@ import { computed } from "@vue/reactivity";
 import { onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import store from "../store";
-import DrinkItem from "../components/DrinkItem.vue";
+import Drinks from "../components/Drinks.vue";
 
 const route = useRoute();
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");

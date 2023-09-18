@@ -5,6 +5,7 @@ import DrinksByIngredient from '../views/DrinksByIngredient.vue';
 import DrinksByLetter from '../views/DrinksByLetter.vue';
 import DrinksByName from '../views/DrinksByName.vue';
 import DrinkDetails from '../views/DrinkDetails.vue';
+import Ingredients from '../views/Ingredients.vue';
 
 
 const routes = [
@@ -29,12 +30,18 @@ const routes = [
                 name: "byLetter",
                 component: DrinksByLetter,
             },
-        
+            
             {
-                path: "/by-ingredient/:ingredient?",
+                path: "/ingredients",
+                name: "ingredients",
+                component: Ingredients,
+            },
+            {
+                path: "/by-ingredient/:ingredient",
                 name: "byIngredient",
                 component: DrinksByIngredient,
             },
+
 
             {
                 path: "/drink/:id",
